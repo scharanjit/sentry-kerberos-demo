@@ -484,11 +484,11 @@ limitations under the License.
         <artifactId>sentry-policy-indexer</artifactId>
         <version>${project.version}</version>
       </dependency>
-      <dependency>
+<!--      <dependency>
         <groupId>org.apache.sentry</groupId>
         <artifactId>sentry-dist</artifactId>
         <version>${project.version}</version>
-      </dependency>
+      </dependency>-->
       <dependency>
         <groupId>javax.jdo</groupId>
         <artifactId>jdo-api</artifactId>
@@ -626,7 +626,7 @@ limitations under the License.
     <module>sentry-tests-hive</module>
     <module>sentry-hdfs</module>
     <!--<module>sentry-solr</module>-->
-    <module>sentry-dist</module>
+    <!--<module>sentry-dist</module>-->
   </modules>
 
   <build>
