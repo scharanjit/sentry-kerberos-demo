@@ -50,14 +50,14 @@ public class TestJDBCInterface extends AbstractTestWithStaticConfiguration {
         System.exit(0);
     }
 
-  @BeforeClass
+ 
   public static void setupTestStaticConfiguration() throws Exception {
     LOGGER.info("TestJDBCInterface setupTestStaticConfiguration");
     policyOnHdfs = true;
     AbstractTestWithStaticConfiguration.setupTestStaticConfiguration();
   }
 
-  @Before
+  
   public void setup() throws Exception {
     LOGGER.info("TestJDBCInterface setup");
     policyFile = super.setupPolicy();
@@ -70,7 +70,7 @@ public class TestJDBCInterface extends AbstractTestWithStaticConfiguration {
    * DB2.tab_2 User user2 has select on DB2.tab_3 Test show database and show
    * tables for both user1 and user2
    */
-  @Test
+ 
   public void testJDBCGetSchemasAndGetTables() throws Exception {
     // admin create two databases
     
