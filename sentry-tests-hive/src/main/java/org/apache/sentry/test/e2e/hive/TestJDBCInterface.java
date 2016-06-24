@@ -29,8 +29,8 @@ import java.util.List;
 
 import org.apache.sentry.provider.file.PolicyFile;
 import org.apache.sentry.dependencies.e2e.hive.AbstractTestWithStaticConfiguration;
-import org.junit.Before;
-import org.junit.BeforeClass;
+//import org.junit.Before;
+//import org.junit.BeforeClass;
 import org.junit.Test;
 
 import org.slf4j.Logger;
@@ -58,6 +58,7 @@ public class TestJDBCInterface extends AbstractTestWithStaticConfiguration {
   }
 
   
+  @Override
   public void setup() throws Exception {
     LOGGER.info("TestJDBCInterface setup");
     policyFile = super.setupPolicy();
@@ -70,7 +71,7 @@ public class TestJDBCInterface extends AbstractTestWithStaticConfiguration {
    * DB2.tab_2 User user2 has select on DB2.tab_3 Test show database and show
    * tables for both user1 and user2
    */
- 
+ @Test
   public void testJDBCGetSchemasAndGetTables() throws Exception {
     // admin create two databases
     
