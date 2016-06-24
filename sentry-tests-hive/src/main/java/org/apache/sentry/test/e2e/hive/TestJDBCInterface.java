@@ -40,6 +40,15 @@ public class TestJDBCInterface extends AbstractTestWithStaticConfiguration {
   private static final Logger LOGGER = LoggerFactory.
           getLogger(TestJDBCInterface.class);
   private static PolicyFile policyFile;
+  
+    public static void main(String[] args) throws Exception {
+        TestJDBCInterface test = new TestJDBCInterface();
+        setupTestStaticConfiguration();
+        test.setup();
+        test.testJDBCGetSchemasAndGetTables();
+        
+        System.exit(0);
+    }
 
   @BeforeClass
   public static void setupTestStaticConfiguration() throws Exception {
@@ -64,13 +73,16 @@ public class TestJDBCInterface extends AbstractTestWithStaticConfiguration {
   @Test
   public void testJDBCGetSchemasAndGetTables() throws Exception {
     // admin create two databases
+    
+    LOGGER.info("HIII");
     Connection connection = context.createConnection(ADMIN1);
+    
     Statement statement = context.createStatement(connection);
     statement.execute("DROP DATABASE IF EXISTS DB_1 CASCADE");
     statement.execute("DROP DATABASE IF EXISTS DB_2 CASCADE");
     statement.execute("DROP DATABASE IF EXISTS DB1 CASCADE");
     statement.execute("DROP DATABASE IF EXISTS DB2 CASCADE");
-
+    LOGGER.info("Creating database");
     statement.execute("CREATE DATABASE " + DB1);
     statement.execute("CREATE DATABASE " + DB2);
     statement.execute("USE " + DB1);

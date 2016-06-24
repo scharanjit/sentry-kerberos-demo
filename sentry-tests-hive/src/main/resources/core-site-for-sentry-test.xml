@@ -20,7 +20,7 @@
 <configuration>
   <property>
     <name>hadoop.security.group.mapping</name>
-    <value>org.apache.sentry.tests.e2e.hive.fs.MiniDFS$PseudoGroupMappingService</value>
+    <value>org.apache.sentry.dependencies.e2e.hive.fs.MiniDFS$PseudoGroupMappingService</value>
   </property>
   <property>
     <name>fs.permissions</name>
