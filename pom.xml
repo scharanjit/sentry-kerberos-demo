@@ -76,7 +76,7 @@ limitations under the License.
     <jdo-api.version>3.0.1</jdo-api.version>
     <jettyVersion>8.1.19.v20160209</jettyVersion>
     <joda-time.version>2.5</joda-time.version>
-    <junit.version>4.10</junit.version>
+    <junit.version>4.13.1</junit.version>
     <libfb303.version>0.9.3</libfb303.version>
     <libthrift.version>0.9.3</libthrift.version>
     <log4j.version>1.2.16</log4j.version>
